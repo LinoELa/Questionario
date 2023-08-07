@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DESCRIPTION DEL CONTENIDO -->
+    <meta name="description" content="Freecodecamp Accesiblity Questionario Paractica">
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./style.css">
+    <title>Questionario de Accesibilidad</title>
+</head>
+
+<body>
+    <header>
+        <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="imagen logo" id="logo">
+
+        <h1 class="h1-questionario">HTML/CSS Questionario</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#student-info">INFO</a></li>
+                <li><a href="#html-questions">HTML</a></li>
+                <li><a href="#css-questions">CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+
+            <!-- SECTION 1  -->
+
+            <section role="region" aria-labelledby="student-info">
+                <!--  -->
+
+                <h2 id="student-info" class="h2-section">Student Info</h2>
+                <!-- NAME -->
+                <div class="info">
+                    <label for="student-name">Name:</label>
+                    <input type="text" id="student-name" name="student-name">
+                </div>
+                <!-- EMAIL -->
+                <div class="info">
+                    <label for="student-email">Correo:</label>
+                    <input type="email" id="student-email" name="student-email">
+                </div>
+                <!-- BIRTH DAY  -->
+                <div class="info">
+                    <label for="birth-date">D.O.B<span class="sr-only">(Fecha Nacimiento):</span></label>
+                    <input type="date" id="birth-date" name="birth-date">
+                </div>
+
+            </section>
+
+
+            <!-- SECTION 2 -->
+
+            <section role="region" aria-labelledby="html-questions">
+                <!-- HTML -->
+                <h2 class="h2-section" id="html-questions">HTML</h2>
+
+                <!-- QUESTIONS BLOCK -->
+                <div class="question-block">
+
+                    <p>1</p>
+
+                    <fieldset class="question" name="html-questions-one">
+
+                        <legend>
+                            The legend element represents a caption for the content of its parent fieldset element
+                        </legend>
+
+                        <ul class="answers-list">
+
+                            <li>
+                                <label for="q1-a1">
+                                    <input type="radio" id="q1-a1" name="q1" value="true"> True
+                                </label>
+                            </li>
+
+                            <li>
+                                <label for="q1-a2">
+                                    <input type="radio" id="q1-a2" name="q2" value="False"> False
+                                </label>
+                            </li>
+
+                        </ul>
+
+                    </fieldset>
+
+                </div>
+
+                <div class="question-block">
+
+                    <p>2</p>
+
+                    <fieldset class="question" name="html-questions-two">
+
+                        <legend>
+                            A label elemento nesting an input elemento is required to have a for
+                            a for attribute whith the same value as
+                            the inputs id
+                        </legend>
+
+                        <ul class="answers-list">
+
+                            <li>
+                                <label for="q2-a1">
+                                    <input type="radio" id="q2-a1" name="q2" value="true"> True
+                                </label>
+                            </li>
+
+                            <li>
+                                <label for="q2-a2">
+                                    <input type="radio" id="q2-a2" name="q2" value="False"> False
+                                </label>
+                            </li>
+
+                        </ul>
+
+                    </fieldset>
+
+                </div>
+
+            </section>
+
+            <!-- SECTION 3 -->
+
+            <section role="region" aria-labelledby="css-questions">
+
+                <h2 class="h2-section" id="css-questions">CSS</h2>
+
+                <div class="formrow">
+
+                    <div class="question-block">
+                        <label for="customer">Are you fontend developer ? </label>
+                    </div>
+
+                    <div class="answer">
+
+                        <select name="customer" id="customer" required>
+                            <option value="">Select an option</option>
+                            <option value="Yes">yes</option>
+                            <option value="no">No</option>
+                        </select>
+
+                    </div>
+
+                    <div class="question-block">
+                        <label for="css-questions">Do you hace any questions? </label>
+                    </div>
+
+                    <div class="answer">
+                        <textarea name="css-questions" id="css-questions" cols="25" rows="5"
+                            placeholder="Who is flexbox "></textarea>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- BUTTON SUBMIT -->
+
+            <button type="submit">Send</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <!-- EN CASO DE QUERER SEPARARLOS 
+            <span><a href="https://freecodecamp.org">Freecodecamp</a></span>
+            <span>San Franccisco </span>
+            <span>USA</span>  -->
+
+        <address>
+            <a href="https://freecodecamp.org">Freecodecamp</a> <br>
+            San Franccisco <br>
+            California <br>
+            USA
+        </address>
+    </footer>
+
+
+</body>
+
+</html>

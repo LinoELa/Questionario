@@ -1,0 +1,241 @@
+@media (prefers-reduced-motion: no-preference) {
+    *{
+        scroll-behavior: smooth;
+    }
+    
+}
+
+body{
+    background: #f5f6f7;
+    color: #1b1b32;
+    font-family: Helvetica;
+    margin: 0;
+}
+
+/* HEADER */
+
+header{ /*aqui esta la parte que hace que no se mueva*/
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b32;
+    /* Flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /*aqui esta la parte que hace que no se mueva*/
+    top: 0;
+}
+
+#logo{
+    width: max(100px , 18vw);
+    background-color: #0a0a23;
+    aspect-ratio: 35/5;
+    padding: 0.4rem;
+}
+
+.h1-questionario{
+    color: #f1be32;
+    font-size: min(5vw, 1.2em);
+    text-align: center;
+}
+
+nav{
+    width: 50%;
+    max-width: 300px;
+    height: 50px;
+}
+
+nav > ul  {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+nav > ul > li {
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+} 
+
+nav > ul > li:hover{
+    background-color: #dfdfe2;
+    color: #1b1b32;
+    cursor: pointer;
+}
+
+li > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* SECTION 1  */
+
+main{
+    padding-top: 0;
+}
+
+
+section{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    max-width: 600px;
+}
+
+h1, h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.h2-section { /* Este es igual a usar H2 simple en este ejemplo*/
+    border-bottom: 4px solid #dfdfe2;
+    margin-top: 0px;
+    padding-top: 60px;
+
+}
+
+.info{
+    padding: 10px 0 0 5px;
+
+}
+
+input{
+    font-size: 16px;
+}
+
+.info label , .info input { /*Convierte en block y los pone en filas diferentes*/
+    display: block;
+}
+
+.info input{ /*El texto y el mismo input */
+    width:50% ;
+    text-align: left;
+} 
+
+/* En caso de querer texto de DOB en linea completo */
+/* .info label {
+    /* width: 10%; */
+    /* min-width: 55px; */
+    /* text-align: right; */
+/*
+}  
+*/
+
+
+/* En caso de quererlo como Freecodecamp */
+.info label {
+    width: 10%; 
+    min-width: 55px;
+    text-align: right; 
+}  
+
+
+
+
+/* SECTION 3 */
+
+.formrow{
+    margin-top: 30px;
+    padding: 0px 15px;
+
+}
+
+.question-block{
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+}
+
+p{
+    margin: 5px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+p::before{
+    content: "Question #";
+}
+
+.question{
+    border: 2px solid #f1be32; /*Poner o quitar el borde*/
+    padding: 0;
+}
+
+
+.answers-list{ /*Poner o quitar los puntos del tipo de lista*/
+    list-style: none;
+    padding: 0;
+} 
+
+
+/* SECTION 3 */
+
+
+/* BUTTON SUBMIT  */
+
+
+button{
+    display: block;
+    margin: 40px auto;
+    width: 40%;
+    padding: 10px;
+    font-size: 23px;
+    background-color: #d0d0d5;
+    border: 3px solid #3b3b4f;
+}
+
+/* FOOTER */
+
+/* EN CASO DE QUERER SEPARARLOS */
+
+/* footer{
+    background-color: #2a2a40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+    
+} */
+
+footer{
+    background-color:#2a2a40 ;
+    display: flex;
+    justify-content: center;
+}
+
+
+footer, footer a {
+    color: #dfdfe2;
+}
+
+address{
+    text-align: center;
+    padding: 0.3rem;
+}
+
+.sr-only{ 
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+
+    /* PASO 25
+    El texto .sr-only todavía es visible. 
+    Hay un patrón común para ocultar texto 
+    visualmente para que sólo los lectores de pantalla lean. 
+*/
+
+
+}
+
